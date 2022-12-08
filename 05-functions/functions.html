@@ -1,0 +1,50 @@
+<!-- HTML 관련 구글링 -->
+<!-- 👉 site:developer.mozilla.org {연관_키워드} -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 외부 파일 연결 -->
+    <link rel="stylesheet" href="functions.css">
+    <Script defer src="functions.js"></Script>
+</head>
+<body>
+    <h1>함수, 일련의 코드 묶음!</h1>
+    <h2>함수, 무엇?</h2>
+    <ul>
+        <li>일련의 코드 묶음 ➡ 코드 재사용성 증가 🔺</li>
+        <li>입력에 따른 결과 반환! (like a 자판기)</li>
+        <li>함수 호출 시, 실행 흐름을 함수 내부로 이동</li>
+        <li>함수 종료 시, 실행 흐름은 이전 위치로 되돌아감</li>
+    </ul>
+    <h2>파라미터, 입력값을 저장하는 변수!</h2>
+    <ul>
+        <li>필요에 따라 개수 조절 가능</li>
+        <li>다음 코드가 동작하도록, 함수를 만들어보자!</li>
+    </ul>
+    <pre>
+        const ramen = createRamen();
+        console.log(ramen);
+        const mandoo = createMandoo("고기");
+        console.log(mandoo);
+        const kimbob = createKimbob("참치", "김치");
+        console.log(kimbob);
+    </pre>
+    <h2>return, 함수 종료와 동시에 값을 반환!</h2>
+    <pre>
+    function NAME(PARAMETERS) {
+        ..
+        // return undefined;
+    }
+    </pre>
+    <h2>함수 실행 시, 변수의 활동 범위를 주의!</h2>
+    <ul>
+        <li>프로그램은 실행 흐름에 따라 변수 관리함</li>
+        <li>함수 호출 👉 파라미터와 지역변수를 만듦</li>
+        <li>함수 종료 👉 파라미터와 지역변수를 제거</li>
+        <li>지역변수란, 함수 또는 블럭(중괄호) 속에 선언된 변수</li>
+    </ul>
+</body>
+</html>

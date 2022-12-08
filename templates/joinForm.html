@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>회원가입 페이지</title>
+</head>
+<body>
+<h1>회원가입 페이지</h1>
+<hr/>
+<form action="/join" method="POST">
+  <input type="text" name="username" placeholder="아이디"><br/>
+  <input type="text" name="name" placeholder="이름"><br/>
+  <input type="password" name="password" placeholder="비밀번호"><br/>
+  <input type="password" name="password_confirm" placeholder="비밀번호 확인"><br/>
+  <input type="text" name="nickname" placeholder="닉네임"><br/>
+  <input type="date" name="dob" placeholder="생일"><br/>
+  <input type="radio" name="gender" value="M">남성<br/>
+  <input type="radio" name="gender" value="F">여성<br>
+  <input type="email" name="email" placeholder="이메일"><br/>
+  <input type="text" name="phnum" placeholder="전화번호"><br/>
+  <button>회원가입</button>
+</form>
+</body>
+</html>

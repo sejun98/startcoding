@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main {
+        margin: 0 auto;
+        width: 80%;
+    }
+    .box {
+        margin: 0 auto;
+        border:0px black solid ;
+    }
+    .box > input{
+        padding-left: 100px;
+        margin: 0 auto;
+        border:1px rgb(163, 163, 163) solid ;
+        width: 80%;
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="layout">
+            <table>
+                <thead>
+                <tr>
+                    <th>글번호</th>
+                    <th>제목</th>
+                </tr>
+                <p><a href="/board/write">글 등록</a></p>
+                </thead>
+                <tbody>
+                <tr th:each="board : ${list}">
+                    <td th:text="${board.id}">1.</td>
+                    <td ><a th:text="${board.titleplace}" th:href="@{/board/view(id=${board.id})}">제목입니다.</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+<!--   상품평 - - - - -->
+        <hr>
+        <h2>상품평</h2>
+        <form action="" class="box">
+            리뷰 제목 : <input type="text" name="title" placeholder="강조하고 싶은 한마디!!!" style="width: 90%; height: 20px; margin-bottom: 15px;"><br>
+            상세 리뷰 : <input type="text" name="content" placeholder="상세한 리뷰를 적어보세요." style="width: 90%; height: 300px;"><br>
+        </form> 
+    </div>
+</body> 
+</html>

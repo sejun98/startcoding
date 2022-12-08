@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link th:href="@{/css/list.css}" rel="stylesheet" type="text/css"/>
+    <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>게시글리스트</title>
+</head>
+<body>
+
+    <header>
+        <div class="header_box">
+          <div class="header_boxin">
+            <a href="/index.html"><img src="/img/logo.png" alt="logo"></a>
+            <ul class="header_ul">
+              <li><a href="/warn">주의사항</a></li>
+              <li><a href="/honeyTip">꿀팁</a></li>
+              <li><a href="/carItem">차량용품</a></li>
+              <li><a href="#">게시판</a></li>
+              <li><a href="/stateSelect">장소찾기</a></li>
+              <li><a sec:authorize="isAnonymous()" th:href="@{/user/login}">로그인</a></li>
+              <li><a sec:authorize="isAuthenticated()" th:href="@{/user/logout}">로그아웃</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+<main class="page">
+    <article class="filter">
+        <form th:action="@{/state/list}" method="get">
+            <center><h4>지역별 검색</h4></center>
+            <input type="radio" name="searchKeyword2" value="">전체<br>
+            <input type="radio" name="searchKeyword2" value="seoul">서울<br>
+            <input type="radio" name="searchKeyword2" value="busan">부산<br>
+            <input type="radio" name="searchKeyword2" value="daegu">대구<br>
+            <input type="radio" name="searchKeyword2" value="incheon">인천<br>
+            <input type="radio" name="searchKeyword2" value="gwangju">광주<br>
+            <input type="radio" name="searchKeyword2" value="daejeon">대전<br>
+            <input type="radio" name="searchKeyword2" value="ulsan">울산<br>
+            <input type="radio" name="searchKeyword2" value="gyeonggido">경기도<br>
+            <input type="radio" name="searchKeyword2" value="gangwondo">강원도<br>
+            <input type="radio" name="searchKeyword2" value="chungcheongbukdo">충청북도<br>
+            <input type="radio" name="searchKeyword2" value="chungcheongnamdo">충청남도<br>
+            <input type="radio" name="searchKeyword2" value="jeollabukdo">전라북도<br>
+            <input type="radio" name="searchKeyword2" value="jeollanamdo">전라남도<br>
+            <input type="radio" name="searchKeyword2" value="gyeongsangbukdo">경상북도<br>
+            <input type="radio" name="searchKeyword2" value="gyeongsangnamdo">경상남도<br>
+            <input type="radio" name="searchKeyword2" value="jejudo">제주도<br>
+            <center>
+                <button type="submit" style="width: 99% ; height:25px ; margin-bottom: 5px;">검색</button>
+            </center>
+        </form>
+    </article>
+
+    <article class="list_box">
+        <section class="state_list" th:each="place : ${list}">
+            <!--each는 반복문 -->
+            <a th:href="@{/state/view(id=${place.id})}">
+                <img th:src="@{${place.filepath}}" width="100%" height="100%"/>
+            </a>
+            <section class="state_text">
+                <strong><text class="title" th:text="${place.titleplace}"></text></strong><br>
+                <text class="content" th:text="${place.content}"></text>
+            </section>
+        </section>
+    </article>
+
+
+    <footer style="text-align: right;">
+        <a href="/state/write">글작성</a>
+        <a href="/logout">로그아웃</a><br />
+        <a th:href="@{/}">메인페이지</a>
+    </footer>
+</main>
+</body>
+</html>

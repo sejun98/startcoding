@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>리뷰 작성폼</title>
+</head>
+
+<style>
+
+    .layout {
+        width: 500px;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+
+    .layout textarea {
+        width: 100%;
+        margin-top: 10px;
+        min-height: 300px;
+    }
+
+</style>
+
+<body>
+<form action="/review/writepro" method="POST">
+    <div class="layout">
+        <input type="text" name="nickname_r" placeholder="작성자"><br />
+        <input type="text" name="titleplace_r" placeholder="장소"><br />
+        <input type="radio" name="star" value="1">1
+        <input type="radio" name="star" value="2">2
+        <input type="radio" name="star" value="3">3
+        <input type="radio" name="star" value="4">4
+        <input type="radio" name="star" value="5">5
+        <textarea name="content_r" placeholder="내용"></textarea>
+        <button type="submit">작성</button>
+    </div>
+</form>
+</body>
+</html>

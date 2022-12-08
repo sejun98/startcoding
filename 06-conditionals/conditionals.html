@@ -1,0 +1,77 @@
+<!-- HTML 관련 구글링 -->
+<!-- 👉 site:developer.mozilla.org {연관_키워드} -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 외부 파일 연결 -->
+    <link rel="stylesheet" href="conditionals.css">
+    <Script defer src="conditionals.js"></Script>
+</head>
+<body>
+    <h1>조건문, 상황별 다른 실행!</h1>
+    <h2>소개팅#1, 라떼와 아아 중 택1</h2>
+    <pre>
+    if (맘에_드는가) {
+        라떼 주문 // 맘에 드는 경우
+    } else {
+        아아 주문 // 맘에 안드는 경우
+    }
+    </pre>
+    <h2>소개팅#2: 아직 모르겠다면 카푸치노</h2>
+    <pre>
+    if (맘에_드는가) {
+        라떼 주문    // 맘에 드는 경우
+    } else if (아직_모르겠는가) {
+        카푸치노 주문 // 아직 모르겠는 경우
+    } else {
+        아아 주문    // 부합하는게 없는 경우 
+    }
+    </pre>
+    <h2>버스요금: 나이에 따른 가격 설정</h2>
+    <pre>
+    if (18세_초과) {
+        1200원    // 일반
+    } else if (12세_초과) {
+        720원     // 청소년
+    } else {
+        450원     // 어린이(12세 이하)
+    }
+    </pre>
+    <h2>계절 찾기</h2>
+    <pre>
+    switch(month) {
+        case 12:
+        case 1:
+        case 2:
+            ☃️ 겨울이라능!
+            break;
+        case 3:
+        case 4:
+        case 5:
+            🌱 봄이라능!
+            break;
+        case 6:
+        case 7:
+        case 8:
+            🏖 여름이다능!
+            break;
+        case 9:
+        case 10:
+        case 11:
+            🍂 가을이라능!
+            break;
+        default:
+            ⚠️ 입력이 잘못됐다능!
+            break;
+    }
+    </pre>
+    <h2>학점: PASS or FAIL</h2>
+    <pre>
+    // 80점 이상이면 "PASS", 아니면 "FAIL"을 반환!
+    const result = (80점 이상인가) ? "PASS" : "FAIL"
+    </pre>
+</body>
+</html>

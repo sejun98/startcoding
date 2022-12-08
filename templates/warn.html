@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+
+<html xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <title>차박주의사항</title>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'SUIT', sans-serif;
+        }
+        h3{
+            font-size: 28px;
+        }
+        p{
+            font-size: 22px;
+        }
+
+        .header_box {
+            width: 100%; height: 115px;
+            background-color: #f6f6f6;
+            margin-bottom: 15px;
+        }
+        .header_boxin {
+            margin: 0 auto;
+            vertical-align:middle;
+            width: 1465px; height: 100%;
+        }
+        .header_boxin > img {
+            margin-top: 20px;
+            margin-left: 50px;
+            float: left;
+        }
+        .header_ul {
+            position: absolute;
+            top: 45px;
+            right: 240px;
+        }
+        .header_ul > li  {
+
+            list-style-type: none; float: left;
+            margin-left: 110px;
+            font-size: 24px;
+            font-weight:500;
+        }
+        .header_ul > li > a {
+            text-decoration: none; /* 링크의 밑줄 제거 */
+            color: inherit; /* 링크의 색상 제거 */
+        }
+        .header_ul > li > a:hover {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="is-preload">
+
+<div id="page-wrapper">
+
+    <!-- Header -->
+    <header>
+        <div class="header_box">
+            <div class="header_boxin">
+                <a href="/index.html"><img src="/img/logo.png" alt="logo"></a>
+                <ul class="header_ul">
+                    <li><a href="/warn">주의사항</a></li>
+                    <li><a href="/honeyTip">꿀팁</a></li>
+                    <li><a href="/carItem">차량용품</a></li>
+                    <li><a href="#">게시판</a></li>
+                    <li><a href="/stateSelect">장소찾기</a></li>
+                    <li><a sec:authorize="isAnonymous()" th:href="@{/user/login}">로그인</a></li>
+                    <li><a sec:authorize="isAuthenticated()" th:href="@{/user/logout}">로그아웃</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Posts -->
+    <section class="wrapper style1"  style="width:75%; margin-left:240px; margin-right:240px">
+        <br><br>
+        <h1 style="font-size:36px; color:#484848">주의사항</h1>
+        <hr style="size:3px;  background-color: #646464">
+        <br><br>
+        <section style="width:100%; height:350px">
+            <div style="width:30%; height:350px; float:left; vertical-align: bottom">
+                <a><img src="/images/cold.jpg" height="289" width="390" /></a>
+            </div>
+            <div style="width:70%; height:350px; float:left; vertical-align: text-bottom">
+                <div style="width:100%; height:140px"></div>
+                <h3>| 차박 장소는 일교차가 큰 곳들이 많기 때문에, 체온 유지를 위한 장비를 준비하세요.</h3>
+                <br>
+                <p>차박을 하는 분들은 최소 1박2일의 여행을 떠나는데대부분의 차박 장소들은 산 위, 바닷가 근처 등 일교차가 큰 곳들 주변이에요.
+                    <br>한 여름이라도 기온차가 날 수 있으니 긴팔 옷과 이불, 체온 유지를 위한 장비를 준비하세요.</p>
+            </div>
+        </section>
+        <section style="width:100%; height:350px">
+            <div style="width:70%;height:350px; float:left; text-align: right">
+                <div style="width:100%; height:150px"></div>
+                <h3> 기울기가 없는 평평한 곳에 주차해 주세요 |&nbsp</h3>
+                <br>
+                <p>그냥 보기에는 평평해 보이는 장소도, 차박을 위해 주차를 하다 보면 한쪽으로 기운 경우들이 있답니다.<br>
+                    만약 빈자리가 없다면 주변의 돌을 이용해서 평평하게 해주세요.<br>
+                    그리고 주차하실 때에는 반드시 사이드 브레이크를 걸어두는 거 잊지 마세요!</p>
+            </div>
+            <div style="width:30%; height:350px; float:left; vertical-align: text-bottom">
+                <a><img src="/images/notslide.jpeg" height="289" width="390" /></a>
+            </div>
+        </section>
+        <section style="width:100%; height:350px">
+            <div style="width:30%; height:350px; float:left; vertical-align: bottom" >
+                <a><img src="/images/mogiyak.png" height="289" width="390" /></a>
+            </div>
+            <div style="width:70%; height:350px;float:left;">
+                <div style="width:100%; height:200px"></div>
+                <h3>| 산속이나 여름철 차박을 하시는 분들은, 벌레를 피할 수 있는 도구를 준비</h3>
+                <br>
+                <p>산모기가 더 간지럽고 흉도 오래간다고 해요</p>
+            </div>
+        </section>
+        <section style="width:100%; height:350px">
+            <div style="width:70%; height:350px; float:left;  text-align: right">
+                <div style="width:100%; height:100px"></div>
+                <h3>보조배터리로 사용할 수 있는 제품들로 준비하기 |&nbsp</h3>
+                <br>
+                <p>핸드폰 충전,랜턴,블루투스 스피커, 온열매트, 등 최대한 보조배터리로 사용가능한 것들로 준비합니다.&nbsp;<br>
+                    차박 시 내 차량이 전기차가 아닌 일반 차량이라면 배터리 방전에 대해서도 신경을 써야 하기 때문에&nbsp;  <br> 실내등이나 디스플레이의 사용을 최소화합니다.&nbsp</p>
+            </div>
+            <div style="width:30%; height:350px; float:left;">
+                <a><img src="/images/battery.png" height="289" width="390" style="text-align: right" /></a>
+            </div>
+        </section>
+    </section>
+</div>
+</body>
+</html>

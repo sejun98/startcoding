@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>차박할래차량용품</title>
+    <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'SUIT', sans-serif;
+        }
+        body{
+            font-family: suit;
+        }
+        hr{
+            width: 97%;
+        }
+        h2{
+            font-size: 24px;
+        }
+        h3{
+            font-size: 20px;
+        }
+        p{
+            font-size: 16px;
+        }
+        .box1{
+            float: left;
+            width: 50%;
+            height: 30%;
+        }
+        .box1_1{
+            float: left;
+            width: 230px;
+            height:300px;
+        }
+        .box2{
+            display: inline-block;
+            width: 48%;
+            height: 30%;
+            margin-left: 10px;
+        }
+
+        .header_box {
+            width: 100%; height: 115px;
+            background-color: #f6f6f6;
+            margin-bottom: 15px;
+        }
+        .header_boxin {
+            margin: 0 auto;
+            vertical-align:middle;
+            width: 1465px; height: 100%;
+        }
+        .header_boxin > img {
+            margin-top: 20px;
+            margin-left: 50px;
+            float: left;
+        }
+        .header_ul {
+            position: absolute;
+            top: 45px;
+            right: 240px;
+        }
+        .header_ul > li  {
+
+            list-style-type: none; float: left;
+            margin-left: 110px;
+            font-size: 24px;
+            font-weight:500;
+        }
+        .header_ul > li > a {
+            text-decoration: none; /* 링크의 밑줄 제거 */
+            color: inherit; /* 링크의 색상 제거 */
+        }
+        .header_ul > li > a:hover {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<!-- Header -->
+<header>
+    <div class="header_box">
+        <div class="header_boxin">
+            <a href="/index.html"><img src="/img/logo.png" alt="logo"></a>
+            <ul class="header_ul">
+                <li><a href="/warn">주의사항</a></li>
+                <li><a href="/honeyTip">꿀팁</a></li>
+                <li><a href="/carItem">차량용품</a></li>
+                <li><a href="#">게시판</a></li>
+                <li><a href="/stateSelect">장소찾기</a></li>
+                <li><a sec:authorize="isAnonymous()" th:href="@{/user/login}">로그인</a></li>
+                <li><a sec:authorize="isAuthenticated()" th:href="@{/user/logout}">로그아웃</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<section style="width:80%; margin-left:10%; margin-right:10%">
+    <br><br>
+    <h1 style="font-size:36px; color:#484848">차량용품</h1>
+    <hr style="size:3px;  background-color: #646464; width:100%">
+    <br><br>
+    <section style="width:100%; height:300px">
+        <div class="box1">
+            <h2>&nbsp;랜턴</h2>
+            <br>
+            <hr>
+            <div class="box1_1">
+                <a href="#"><img src="/images/neo30.png" height="200" width="200" /></a>
+            </div>
+            <br>
+            <h3>랜턴</h3>
+            <br>
+            <br>
+            <p>길을 밝혀줘요</p>
+        </div>
+        <div class="box2">
+            <h2>&nbsp;화로대</h2>
+            <br>
+            <hr>
+            <div class="box1_1">
+                <a href="#"><img src="/images/fire.png" height="200" width="200" /></a>
+            </div>
+            <br>
+            <h3>화로대</h3>
+            <br>
+            <br>
+            <p>밖에서 고기구울 때 필수 용품</p>
+        </div>
+    </section>
+    <section style="width:100%; height:300px">
+        <div class="box1">
+            <h2>&nbsp;타프</h2>
+            <br>
+            <hr>
+            <div class="box1_1">
+                <a href="#"><img src="/images/tarf.png" height="200" width="200" /></a>
+            </div>
+            <br>
+            <h3>타프</h3>
+            <br>
+            <br>
+            <p>차에서도 열수있는 텐트</p>
+        </div>
+        <div class="box2">
+            <h2>&nbsp;침낭</h2>
+            <br>
+            <hr>
+            <div class="box1_1">
+                <a href="#"><img src="/images/침낭.png" height="200" width="200" /></a>
+            </div>
+            <br>
+            <h3>침낭</h3>
+            <br>
+            <br>
+            <p>따뜻하고 포근해요</p>
+        </div>
+    </section>
+    <section style="width:100%; height:300px">
+        <div class="box1">
+            <h2>&nbsp;매트리스</h2>
+            <br>
+            <hr>
+            <div class="box1_1">
+                <a href="#"><img src="/images/bed.png" height="200" width="200" /></a>
+            </div>
+            <br>
+            <h3>매트리스</h3>
+            <br>
+            <br>
+            <p>편하게 누울수 있어요</p>
+        </div>
+        <div class="box2">
+            <h2>&nbsp;텐트</h2>
+            <br>
+            <hr>
+            <div class="box1_1">
+                <a href="#"><img src="/images/tent.png" height="200" width="200" /></a>
+            </div>
+            <br>
+            <h3>텐트</h3>
+            <br>
+            <br>
+            <p>텐트 가져가세요</p>
+        </div>
+    </section>
+    <section style="width:100%; height:300px">
+        <div class="box1">
+            <h2>&nbsp;테이블</h2>
+            <br>
+            <hr>
+            <div class="box1_1">
+                <a href="#"><img src="/images/table.png" height="200" width="200" /></a>
+            </div>
+            <br>
+            <h3>테이블</h3>
+            <br>
+            <br>
+            <p>편하게 밥드세요</p>
+        </div>
+        <div class="box2">
+            <h2>장작연료</h2>
+            <br>
+            <hr>
+            <div class="box1_1">
+                <a href="#"><img src="/images/wood.png" height="200" width="200" /></a>
+            </div>
+            <br>
+            <h3>장작연료</h3>
+            <br>
+            <br>
+            <p>겨울 필수템</p>
+        </div>
+    </section>
+    <section style="width:100%; height:300px">
+        <div class="box1">
+            <h2>&nbsp;캠핑버너</h2>
+            <br>
+            <hr>
+            <div class="box1_1">
+                <a href="#"><img src="/images/campingburner.png" height="200" width="200" /></a>
+            </div>
+            <br>
+            <h3>캠핑버너</h3>
+            <br>
+            <br>
+            <p>고기 야무지게 굽는법</p>
+        </div>
+    </section>
+</section>
+</body>
+</html>
